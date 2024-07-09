@@ -54,21 +54,20 @@ main{
 }
 
 .but-container:hover{
-    cursor: pointer;
-    font-size: calc(1rem + calc(2 * var(--unit)));
-    border: 2px double #36647c;
-    border-radius: 10px;
+    cursor:pointer;
     background-color: rgba(0, 0, 0, 0.492);
-    padding: calc(1*var(--unit));
-    min-height: 200px;
-    text-align: center;
     fill: white;
+    border: none;
 }
-.but-container:hover > .add-book{
+.but-container:hover .add-book{
     color: white;
 }
 
 .add-book{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     font-size: calc(1rem + calc(2 * var(--unit)));
     font-family: 'library-bold';
     height: 100%;
