@@ -95,6 +95,9 @@ main{
 .read{
     color: rgb(18, 171, 18);
 }
+.red{
+    color: red;
+}
 dialog{
     padding: 0;
     margin: 0;
@@ -107,7 +110,16 @@ dialog{
     width: 400px;
     border-radius: 15px;
     box-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
+    transition: all 0.5s;
+    
 }
+@starting-style {
+    dialog[open] {
+      opacity: 0;
+      transform: scaleY(0);
+    }
+}
+
 .dialog-holder{
     border: none;
     box-sizing: border-box;
@@ -175,8 +187,7 @@ input[type="checkbox"]:checked::before {
 .read-container{
     display: flex;
 }
-button.add,
-button.cancel{
+button.add{
     font-family: 'library-bold';
     flex-shrink: 1;
     width: 95%;
@@ -188,9 +199,27 @@ button.cancel{
     margin: 10px 0;
     color: #e3d6bc;
 }
+.add:hover{
+ color:white;
+ background:linear-gradient(to right, #346e6e, #012933);;
+}
 .cancel{
+    font-family: 'library-bold';
+    flex-shrink: 1;
+    width: 95%;
+    font-size: calc(1rem + calc(0.9 * var(--unit))); 
+    border-radius: 30px;
+    padding: var(--unit);
+    border: none;
+    margin: 10px 0;
+    color: #e3d6bc;
     background: linear-gradient(to right,#e48344, #72301d);
 }
+.cancel:hover{
+    color: white;
+    background: linear-gradient(to right,#ff6f0f, #72301d);
+}
+
 
 @media (max-width:600px){
     :root{
