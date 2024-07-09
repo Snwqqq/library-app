@@ -1,5 +1,33 @@
+@font-face {
+    font-family: 'library';
+    src: url(./Fonts/web-fonts/cinzeldecorative_regular_macroman/CinzelDecorative-Regular-webfont.woff) format('woff');
+}
+@font-face {
+    font-family: 'library-bold';
+    src: url(./Fonts/web-fonts/cinzeldecorative_bold_macroman/CinzelDecorative-Bold-webfont.woff) format('woff');
+}
+
 :root{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    --unit: 1vh;
+}
+body{
+    background-image: url('./Images/background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+}
+header{
+    background-color: rgba(0, 0, 0, 0.189);
+    height: calc(10* var(--unit));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'library-bold',Arial, Helvetica, sans-serif;
+    font-size: calc(1rem + 5vh);
+    box-shadow: 1px 1px 20px black;
 }
