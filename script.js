@@ -8,6 +8,17 @@ const userPages = document.querySelector("#pages");
 const userRead = document.querySelector("#read");
 const main = document.querySelector("main");
 
+
+function findNewDeleteButtons(){
+const deleteImgButtons = document.querySelectorAll(".delete-img");
+deleteImgButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        button.parentElement.remove();
+    });
+});
+}
+findNewDeleteButtons();
+
 openDialog.addEventListener("click", ()=>{
     dialog.showModal();
 })
@@ -46,6 +57,9 @@ function createDiv(book){
     const newDiv = document.createElement("div");
     newDiv.classList.add("book-container");
     main.appendChild(newDiv);
+    const deleteImg = document.createElement("img");
+    deleteImg.src="./Images/delete-empty.svg";
+    deleteImg.classList.add("delete-img");
     for(let i = 0;i<4;i++){
         let newP = document.createElement("p");
         switch (i){
@@ -74,5 +88,7 @@ function createDiv(book){
             }
         newDiv.appendChild(newP);
         }
+        newDiv.appendChild(deleteImg);
+        findNewDeleteButtons();
     }
 

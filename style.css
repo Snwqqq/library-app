@@ -98,6 +98,11 @@ main{
 .red{
     color: red;
 }
+.delete-img{
+    width:calc(1rem + calc(2 * var(--unit)));
+    justify-self: end;
+    cursor: pointer;
+}
 dialog{
     padding: 0;
     margin: 0;
