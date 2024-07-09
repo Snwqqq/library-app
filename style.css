@@ -41,40 +41,36 @@ main{
     grid-template-columns:repeat(auto-fill, minmax(calc(26*var(--unit)),1fr));
     padding: calc(3 * var(--unit));
 }
-.but-container{
+
+.add-book svg{
+    width: 100px;
+}
+
+.add-book{ 
     border: 2px double #36647c;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.683);
     padding: calc(1*var(--unit));
     min-height: 200px;
     text-align: center;
-}
-.but-container svg{
-    width: 100px;
-}
-
-.but-container:hover{
-    cursor:pointer;
-    background-color: rgba(0, 0, 0, 0.492);
-    fill: white;
-    border: none;
-}
-.but-container:hover .add-book{
-    color: white;
-}
-
-.add-book{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(1rem + calc(2 * var(--unit)));
     font-family: 'library-bold';
-    height: 100%;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0);
-    border:none;
+    transition: all 0.3s;
 }
+
+.add-book:hover{
+    cursor:pointer;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.492);
+    fill: white;
+    outline: none;
+    color: white;
+}
+
 .book-container{
     display: grid;
     grid-template-rows: 3fr 1fr 1fr 1fr;
@@ -100,17 +96,29 @@ main{
     color: rgb(18, 171, 18);
 }
 dialog{
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    align-self: center;
+    justify-self: center;
+    background-color: #e3d6bc00;
+    width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
+}
+.dialog-holder{
+    border: none;
     box-sizing: border-box;
     background-color: #e3d6bc;
     border: 9px double #2f586e;
     color: #1a2543 ;
     border-radius: 15px;
     width: 400px;
-    outline: none;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
 }
 ::backdrop {
     background-color: black;
@@ -191,7 +199,10 @@ button.cancel{
     body{
         background-repeat: repeat;
     }
-    dialog{
-        width: 100vw;
+
+    dialog,
+    .dialog-holder{
+        box-sizing: border-box;
+        width: 88vw;
     }
 }
