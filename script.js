@@ -11,7 +11,8 @@ const main = document.querySelector("main");
 openDialog.addEventListener("click", ()=>{
     dialog.showModal();
 })
-closeBut.addEventListener("click", ()=>{
+closeBut.addEventListener("click", (event)=>{
+    event.preventDefault()
     dialog.close();
 });
 
