@@ -49,9 +49,8 @@ function RemoveBook(div,num){
 
 
 function UpdateGrid(){
-while(grid.childElementCount>0){
-    console.log(grid.childElementCount);
-    grid.removeChild(grid.firstChild);
+while(main.childElementCount>2 ){
+    main.removeChild(main.lastChild);
     gridArray = [];
 }
 
@@ -59,7 +58,7 @@ while(grid.childElementCount>0){
  for (const book of arrayOfBooks){
     const newDiv = document.createElement("div");
     newDiv.classList.add("book-container");
-    grid.appendChild(newDiv);
+    main.appendChild(newDiv);
 
     const deleteImg = document.createElement("img");
     deleteImg.src="./Images/delete-empty.svg";
