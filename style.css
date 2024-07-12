@@ -118,7 +118,7 @@ dialog{
     transition: all 0.5s;
     
 }
-@starting-style {
+ @starting-style {
     dialog[open] {
       opacity: 0;
       transform: scaleY(0);
