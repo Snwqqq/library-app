@@ -15,7 +15,7 @@ let gridArray = [];
 class Book{
     constructor(title,author,pages,read){
         this.title = title;
-        this.author = "by " + author;
+        this.author = author;
         this.pages = pages + " pages";
         this.read = read;
     }
